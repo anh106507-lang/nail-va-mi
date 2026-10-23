@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honey Nail & Spa - Premium Salon</title>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- File CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- SIDEBAR MỤC CHỨC NĂNG BÊN TRÁI -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <div class="logo-icon">👑</div>
+            <div class="logo-text">HONEY NAIL</div>
+        </div>
+
+        <nav class="sidebar-menu">
+            <div class="menu-item active" onclick="switchPage('services-page', this)">
+                <i class="fa-solid fa-gem"></i>
+                <span>Trang 1: Dịch Vụ & Spa</span>
+            </div>
+            <div class="menu-item" onclick="switchPage('contact-page', this)">
+                <i class="fa-regular fa-calendar-check"></i>
+                <span>Trang 2: Đặt Lịch & Liên Hệ</span>
+            </div>
+            <div class="menu-item" onclick="switchPage('cart-page', this)">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>Giỏ Hàng Dịch Vụ</span>
+                <span class="badge" id="cart-count">0</span>
+            </div>
+            <div class="menu-item" onclick="switchPage('my-bookings-page', this)">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <span>Lịch Hẹn Đã Đặt</span>
+            </div>
+            <div class="menu-item" onclick="switchPage('settings-page', this)">
+                <i class="fa-solid fa-sliders"></i>
+                <span>Cài Đặt</span>
+            </div>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p><i class="fa-solid fa-phone"></i> 0988.XXX.XXX</p>
+        </div>
+    </aside>
+
+    <!-- NỘI DUNG CHÍNH (MAIN CONTENT) -->
+    <main class="main-content">
+
+        <!-- HEADER TOP -->
+        <header class="top-header">
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm dịch vụ...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="user-profile">
+                <i class="fa-solid fa-user-circle"></i>
+                <span>Xin chào, Khách Hàng</span>
+            </div>
+        </header>
+
+        <!-- ================= TRANG 1: TẤT CẢ DỊCH VỤ ================= -->
+        <!-- ================= TRANG 1: TẤT CẢ DỊCH VỤ ================= -->
+        <section id="services-page" class="page-content active">
+            <div class="hero-section">
+                <h1 class="main-title">NAIL BASIC CARE</h1>
+                <p class="subtitle">Trải nghiệm các dịch vụ quen thuộc trong không gian chuẩn Salon Châu Âu</p>
+            </div>
+
+            <!-- DANH SÁCH DỊCH VỤ XẮP XẾP 3 Ô / 1 HÀNG -->
+            <div class="services-grid-3">
+                <div class="service-item" onclick="addToCart('MANICURE - Chăm sóc móng tay', 150000)">
+                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=600&auto=format&fit=crop" alt="Manicure">
+                    <div class="service-label">MANICURE</div>
+                    <div class="add-hover-btn">+ Lưu giỏ hàng</div>
+                </div>
+
+                <div class="service-item" onclick="addToCart('PEDICURE - Chăm sóc móng chân', 180000)">
+                    <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=600&auto=format&fit=crop" alt="Pedicure">
+                    <div class="service-label">PEDICURE</div>
+                    <div class="add-hover-btn">+ Lưu giỏ hàng</div>
+                </div>
+
+                <div class="service-item" onclick="addToCart('GEL POLISH - Sơn Gel cao cấp', 250000)">
+                    <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=600&auto=format&fit=crop" alt="Gel Polish">
+                    <div class="service-label">GEL POLISH</div>
+                    <div class="add-hover-btn">+ Lưu giỏ hàng</div>
+                </div>
+
+                <div class="service-item" onclick="addToCart('HAND MASSAGE - Massage tay', 200000)">
+                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=600&auto=format&fit=crop" alt="Hand Massage">
+                    <div class="service-label">HAND MASSAGE</div>
+                    <div class="add-hover-btn">+ Lưu giỏ hàng</div>
+                </div>
+
+                <div class="service-item" onclick="addToCart('COMBO 4 IN 1 - Trọn gói chăm sóc', 550000)">
+                    <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?q=80&w=600&auto=format&fit=crop" alt="Combo 4 in 1">
+                    <div class="service-label">COMBO 4 IN 1</div>
+                    <div class="add-hover-btn">+ Lưu giỏ hàng</div>
+                </div>
+
+                <div class="service-item" onclick="addToCart('FOOT MASSAGE - Massage chân', 220000)">
+                    <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=600&auto=format&fit=crop" alt="Foot Massage">
+                    <div class="service-label">FOOT MASSAGE</div>
+                    <div class="add-hover-btn">+ Lưu giỏ hàng</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TRANG 2: LIÊN HỆ & ĐẶT LỊCH ================= -->
+        <section id="contact-page" class="page-content">
+            <div class="page-header">
+                <h2>Đặt Lịch Hẹn & Thông Tin Liên Hệ</h2>
+                <p>Đặt lịch trước để trải nghiệm dịch vụ tốt nhất mà không phải chờ đợi</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Form Đặt Lịch -->
+                <div class="booking-card">
+                    <h3><i class="fa-regular fa-calendar-plus"></i> Đăng Ký Lịch Hẹn</h3>
+                    <form id="booking-form" onsubmit="handleBooking(event)">
+                        <div class="form-group">
+                            <label>Họ và Tên</label>
+                            <input type="text" id="cust-name" placeholder="Nguyễn Văn A" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Số Điện Thoại</label>
+                            <input type="tel" id="cust-phone" placeholder="0901234567" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Chọn Dịch Vụ</label>
+                            <select id="cust-service" required>
+                                <option value="Sơn Gel Basic">Sơn Gel Basic</option>
+                                <option value="Manicure + Pedicure">Manicure + Pedicure</option>
+                                <option value="Nối Mi Volume Châu Âu">Nối Mi Volume Châu Âu</option>
+                                <option value="Combo 4 in 1 VIP">Combo 4 in 1 VIP</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Ngày Đặt</label>
+                                <input type="date" id="cust-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Giờ Đặt</label>
+                                <input type="time" id="cust-time" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-submit">XÁC NHẬN ĐẶT LỊCH</button>
+                    </form>
+                </div>
+
+                <!-- Thông Tin Liên Hệ Salon -->
+                <div class="info-card">
+                    <h3><i class="fa-solid fa-location-dot"></i> Honey Nail & Spa Salon</h3>
+                    <div class="info-item">
+                        <i class="fa-solid fa-map-pin"></i>
+                        <p><strong>Địa chỉ:</strong> 123 Đường Lớn, Quận 1, TPHCM</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <p><strong>Hotline đặt lịch:</strong> 0988 123 456</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <p><strong>Giờ mở cửa:</strong> 09:00 AM - 20:30 PM (Hàng ngày)</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p><strong>Email:</strong> booking@honeynailspa.vn</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TRANG 3: GIỎ HÀNG DỊCH VỤ ================= -->
+        <section id="cart-page" class="page-content">
+            <div class="page-header">
+                <h2>Giỏ Hàng Dịch Vụ Của Bạn</h2>
+            </div>
+            <div class="card-box">
+                <div id="cart-list-container">
+                    <p style="color: #a0a0a0; text-align: center;">Giỏ hàng hiện tại đang trống.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TRANG 4: LỊCH HẸN ĐÃ ĐẶT ================= -->
+        <section id="my-bookings-page" class="page-content">
+            <div class="page-header">
+                <h2>Danh Sách Lịch Hẹn Đã Đặt</h2>
+            </div>
+            <div class="card-box">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Khách Hàng</th>
+                            <th>SĐT</th>
+                            <th>Dịch Vụ</th>
+                            <th>Thời Gian</th>
+                            <th>Trạng Thái</th>
+                        </tr>
+                    </thead>
+                    <tbody id="booking-list-body">
+                        <tr>
+                            <td colspan="5" style="text-align: center; color: #888;">Chưa có lịch hẹn nào được đăng ký.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ================= TRANG 5: CÀI ĐẶT ================= -->
+        <section id="settings-page" class="page-content">
+            <div class="page-header">
+                <h2>Cài Đặt Hệ Thống</h2>
+            </div>
+            <div class="card-box">
+                <p>Tùy chỉnh giao diện, ngôn ngữ và thông báo salon.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SCRIPT CHUYỂN TRANG VÀ XỬ LÝ SỰ KIỆN -->
+    <script>
+        // Hàm chuyển giữa các trang
+        function switchPage(pageId, menuItem) {
+            document.querySelectorAll('.page-content').forEach(page => page.classList.remove('active'));
+            document.querySelectorAll('.menu-item').forEach(item => item.classList.remove('active'));
+
+            document.getElementById(pageId).classList.add('active');
+            menuItem.classList.add('active');
+        }
+
+        // Logic Giỏ Hàng
+        let cartItems = [];
+
+        function addToCart(name, price) {
+            cartItems.push({ name, price });
+            document.getElementById('cart-count').innerText = cartItems.length;
+            renderCart();
+            alert(`Đã thêm "${name}" vào giỏ hàng!`);
+        }
+
+        function renderCart() {
+            const container = document.getElementById('cart-list-container');
+            if(cartItems.length === 0) {
+                container.innerHTML = `<p style="color: #a0a0a0; text-align: center;">Giỏ hàng hiện tại đang trống.</p>`;
+                return;
+            }
+
+            let html = '<ul style="list-style: none; padding: 0;">';
+            let total = 0;
+            cartItems.forEach((item, idx) => {
+                total += item.price;
+                html += `
+                    <li style="display:flex; justify-size:space-between; justify-content:space-between; padding: 12px 0; border-bottom: 1px solid #333;">
+                        <span>${item.name}</span>
+                        <span style="color: #d4af37; font-weight: bold;">${item.price.toLocaleString()} đ</span>
+                    </li>
+                `;
+            });
+            html += `</ul>
+                <div style="margin-top: 20px; text-align: right; font-size: 1.2rem; font-weight: bold; color: #d4af37;">
+                    Tổng tiền: ${total.toLocaleString()} đ
+                </div>`;
+            container.innerHTML = html;
+        }
+
+        // Logic Đặt Lịch Hẹn
+        let bookings = [];
+
+        function handleBooking(e) {
+            e.preventDefault();
+            const name = document.getElementById('cust-name').value;
+            const phone = document.getElementById('cust-phone').value;
+            const service = document.getElementById('cust-service').value;
+            const date = document.getElementById('cust-date').value;
+            const time = document.getElementById('cust-time').value;
+
+            bookings.push({ name, phone, service, date, time });
+
+            // Cập nhật bảng Lịch Hẹn
+            const tbody = document.getElementById('booking-list-body');
+            let html = '';
+            bookings.forEach(b => {
+                html += `
+                    <tr>
+                        <td>${b.name}</td>
+                        <td>${b.phone}</td>
+                        <td>${b.service}</td>
+                        <td>${b.time} - ${b.date}</td>
+                        <td><span style="color: #10b981; font-weight: bold;">Xác nhận</span></td>
+                    </tr>
+                `;
+            });
+            tbody.innerHTML = html;
+
+            alert('Đặt lịch hẹn thành công!');
+            document.getElementById('booking-form').reset();
+            switchPage('my-bookings-page', document.querySelectorAll('.menu-item')[3]);
+        }
+    </script>
+</body>
+</html>
